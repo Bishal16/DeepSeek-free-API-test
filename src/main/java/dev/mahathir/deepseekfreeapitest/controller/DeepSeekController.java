@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/deepseek")
+@RequestMapping("/api/aimodel")
 public class DeepSeekController {
 
     private final DeepSeekService deepSeekService;

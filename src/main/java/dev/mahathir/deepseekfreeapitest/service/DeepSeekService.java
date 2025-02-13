@@ -14,10 +14,10 @@ import java.util.Map;
 @Service
 public class DeepSeekService {
 
-    @Value("${deepseek.api.key}")
+    @Value("${openrouter.api.key}")
     private String apiKey;
 
-    @Value("${deepseek.api.url}")
+    @Value("${openrouter.api.url}")
     private String apiUrl;
 
     private final RestTemplate restTemplate = new RestTemplate();
@@ -29,7 +29,7 @@ public class DeepSeekService {
         headers.set("Authorization", "Bearer " + apiKey);
 
         Map<String, Object> requestBody = Map.of(
-                "model", "deepseek/deepseek-r1-distill-qwen-32b",
+                "model", "google/gemini-2.0-flash-001",
                 "messages", Collections.singletonList(Map.of("role", "user", "content", message)),
                 "stream", false
         );
